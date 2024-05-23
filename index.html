@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Inference Engine</title>
+</head>
+<body>
+    <h1>Inference Engine</h1>
+    <form method="post" action="/">
+        <textarea name="content" rows="10" cols="50"></textarea><br>
+        <label for="method">Method:</label>
+        <select name="method">
+            <option value="TT">Truth Table (TT)</option>
+            <option value="FC">Forward Chaining (FC)</option>
+            <option value="BC">Backward Chaining (BC)</option>
+        </select><br>
+        <input type="submit" value="Submit">
+    </form>
+    {% if result %}
+        <h2>Result:</h2>
+        <p>{{ result }}</p>
+    {% endif %}
+</body>
+</html>
